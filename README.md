@@ -37,3 +37,10 @@ Simple memory manager made in C++/WinAPI (can be used for example in game hackin
   ModuleInfo mInfo;
   memory.GetModuleInformation("client.dll", mInfo);
   ```
+  
+  ***
+  
+  ### Error codes:
+  Error code | #
+  --- | ---
+  0 | test
