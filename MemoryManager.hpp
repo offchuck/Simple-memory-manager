@@ -10,10 +10,17 @@ class CMemory {
 private:
 	DWORD m_dwProcessId;
 	HANDLE m_hProcess;
-	std::string m_strProcessName;
 public:
+	std::string m_strProcessName;
+
 	DWORD GetProcessId()
 	{
+		if (m_strProcessName == "")
+		{
+			std::cout << "Error: 0" << std::endl;
+			return NULL;
+		}
+
 		HANDLE hSnap = CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, NULL);
 
 		if (hSnap == INVALID_HANDLE_VALUE)
@@ -46,6 +53,12 @@ public:
 
 	HANDLE GetProcessHandle()
 	{
+		if (m_strProcessName == "")
+		{
+			std::cout << "Error: 0" << std::endl;
+			return NULL;
+		}
+
 		GetProcessId();
 
 		if (m_dwProcessId == NULL)
@@ -61,6 +74,12 @@ public:
 
 	DWORD GetProcessBaseAddr()
 	{
+		if (m_strProcessName == "")
+		{
+			std::cout << "Error: 0" << std::endl;
+			return NULL;
+		}
+
 		GetProcessId();
 
 		if (m_dwProcessId == NULL)
@@ -87,6 +106,12 @@ public:
 
 	bool GetModuleInformation(const std::string ModuleName, ModuleInfo& mInfo)
 	{
+		if (m_strProcessName == "")
+		{
+			std::cout << "Error: 0" << std::endl;
+			return NULL;
+		}
+
 		GetProcessId();
 
 		if (m_dwProcessId == NULL)
@@ -132,6 +157,11 @@ public:
 	void Write(DWORD dwAddress, t val)
 	{
 		WriteProcessMemory(m_hProcess, (LPVOID)dwAddress, &val, sizeof(t), NULL);
+	}
+
+	CMemory()
+	{
+		m_strProcessName = "";
 	}
 
 	CMemory(const std::string ProcessName)
