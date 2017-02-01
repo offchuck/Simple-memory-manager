@@ -2,11 +2,13 @@
 #include <Windows.h>
 #include <TlHelp32.h>
 
-struct ModuleInfo {
+struct ModuleInfo
+{
 	DWORD dwModBaseAddr, dwModSize;
 };
 
-class CMemory {
+class CMemory
+{
 private:
 	DWORD m_dwProcessId;
 	HANDLE m_hProcess;
