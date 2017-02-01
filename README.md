@@ -16,7 +16,8 @@ Simple memory manager made in C++/WinAPI (can be used for example in game hackin
   
   - GetModuleInformation(const std::string ModuleName, ModuleInfo& mInfo) - returns information of module by name.
   
-  ```struct ModuleInfo {
+  ```
+  struct ModuleInfo {
 	DWORD dwModBaseAddr, dwModSize;
   };
   ```
