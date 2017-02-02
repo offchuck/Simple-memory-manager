@@ -17,7 +17,7 @@ public:
 
 	DWORD GetProcessId()
 	{
-		if (m_strProcessName == "")
+		if (m_strProcessName == "" || m_strProcessName == NULL)
 		{
 			std::cout << "Error: 0" << std::endl;
 			return NULL;
