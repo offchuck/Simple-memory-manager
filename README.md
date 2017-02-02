@@ -25,7 +25,7 @@ Simple memory manager made in C++/WinAPI (can be used for example in game hackin
   
   ***
   
-  - Read(DWORD dwAddress) - wrapper to WinAPI's ReadProcessMemory function.
+  - Read(DWORD dwAddress) - wrapper to WinAPI's ReadProcessMemory function. 
   - Write(DWORD dwAddress, t val) - wrapper to WinAPI's WriteProcessMemory function.
   
   ***
