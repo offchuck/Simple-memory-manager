@@ -42,9 +42,9 @@ Simple memory manager made in C++/WinAPI (can be used for example in game hackin
   ***
   
   ### Error codes:
-  Error code | Error message
+  Code | Information
   --- | ---
-  0 | When using constructor without std::string it means m_strProcessName is empty.
+  0 | String m_strProcessName is empty.
   1 | Cannot create Process/Module snapshot.
   2 | Cannot find Process by name.
   3 | Cannot find Module by name.
