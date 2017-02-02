@@ -32,11 +32,11 @@ Simple memory manager made in C++/WinAPI (can be used for example in game hackin
   
  #### Example usage:
   ```C++
-  CMemory memory("csgo.exe");
+  CMemory memory("process.exe");
   std::cout << " Process id: " << memory.GetProcessId() << std::endl;
   
-  ModuleInfo modClient;
-  memory.GetModuleInformation("client.dll", modClient);
+  ModuleInfo modExample;
+  memory.GetModuleInformation("example.dll", modClient);
   ```
   
   ***
