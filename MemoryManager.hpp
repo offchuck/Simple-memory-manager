@@ -17,7 +17,7 @@ public:
 
 	DWORD GetProcessId()
 	{
-		if (m_strProcessName == "")
+		if (m_strProcessName == NULL)
 		{
 			std::cout << "Error: 0" << std::endl;
 			return NULL;
@@ -55,7 +55,7 @@ public:
 
 	HANDLE GetProcessHandle()
 	{
-		if (m_strProcessName == "")
+		if (m_strProcessName == NULL)
 		{
 			std::cout << "Error: 0" << std::endl;
 			return NULL;
@@ -76,7 +76,7 @@ public:
 
 	DWORD GetProcessBaseAddr()
 	{
-		if (m_strProcessName == "")
+		if (m_strProcessName == NULL)
 		{
 			std::cout << "Error: 0" << std::endl;
 			return NULL;
@@ -108,7 +108,7 @@ public:
 
 	bool GetModuleInformation(const std::string ModuleName, ModuleInfo& mInfo)
 	{
-		if (m_strProcessName == "")
+		if (m_strProcessName == NULL)
 		{
 			std::cout << "Error: 0" << std::endl;
 			return NULL;
@@ -163,7 +163,7 @@ public:
 
 	CMemory()
 	{
-		m_strProcessName = "";
+		m_strProcessName = NULL;
 	}
 
 	CMemory(const std::string ProcessName)
