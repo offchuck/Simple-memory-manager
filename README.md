@@ -44,7 +44,7 @@ Simple memory manager made in C++/WinAPI (can be used for example in game hackin
   ### Error codes:
   Code | Information
   --- | ---
-  0 | String m_strProcessName is empty.
+  0 | String m_strProcessName is null.
   1 | Cannot create Process/Module snapshot.
   2 | Cannot find Process by name.
   3 | Cannot find Module by name.
